@@ -7,7 +7,25 @@ var startingCity = document.getElementById("starting-city")   //get starting cit
 startingCity.addEventListener("change", getFlightInfo);
 
 
-randomAirportArray = ["ATL", "PEK", "LAX", "HND", "DXB", "ORD", "LHR", "PVG", "CDG", "DFW"]
+randomAirportInfo = [
+  {
+    airportCode: "ATL",
+    city: "Atlanta"
+  },
+  {
+    airportCode: "PEK",
+    city: "Beijing"
+  },
+  {
+    airportCode: "LAX",
+    city: "Los Angeles"
+  },
+  {
+    airportCode: "HND",
+    city: "Tokyo"
+  },
+
+]
 
 
 function shuffle(array) {
@@ -19,18 +37,7 @@ function shuffle(array) {
   }
 }
 
-function getRandomCity(array) {
-  var updatedArray = [];
-  for (var index = 0; index < array.length; index++){
-  updatedArray.push(array[index] + "-sky");
-  }
-
-  shuffle(updatedArray);
-  randomAirport = updatedArray[0];
-  return randomAirport;
-}
-
-function getStartingCity(){
+function getStartingCity() {
   document.querySelector(".start-modal").classList.add("hidden");
 
   if (startingCity.value === "los-angeles") {
@@ -45,12 +52,32 @@ function getStartingCity(){
 
 
 
-function getFlightInfo() {
+function getRandomCity(array) {
+  var updatedArray = [];
+  for (var index = 0; index < array.length; index++) {
+    array[index].airportCode += "-sky"
+    updatedArray.push(array[index]);
+  }
+
+  shuffle(updatedArray);
+  randomAirport = updatedArray[0].airportCode;
+
+  var header = document.querySelector("header");
+  var headerText = document.querySelector("h1");
+  headerText.textContent = "Pack your bags, you're going to " + updatedArray[0].city + "!"
+  header.append(headerText);
+
+  return randomAirport;
+}
+
+
+
+function getFlightInfo(){
 
   getStartingCity();
-  getRandomCity(randomAirportArray);
+  getRandomCity(randomAirportInfo);
 
-  flightURL = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/" + originAirport + "/" + randomAirport +"/2020-09-01?inboundpartialdate=2020-12-01"
+  flightURL = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/" + originAirport + "/" + randomAirport + "/2020-09-01?inboundpartialdate=2020-12-01"
 
   var settings = {
     "async": true,
