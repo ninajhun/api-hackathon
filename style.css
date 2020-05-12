@@ -1,3 +1,7 @@
+ main, header {
+      display: flex;
+      justify-content: center;
+    }
 
 .start-modal{
   position: fixed;
@@ -7,13 +11,44 @@
   bottom: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   flex-direction: column;
   font-size: 1.5rem ;
-  background-color:rgb(187, 219, 247);
+  background-color:rgb(243, 243, 243);
 }
 
 
+.vid-container {
+  height: 65%;
+  width: 100%;
+  background-color:rgb(187, 219, 247);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* MAIN */
+
+main {
+  width: 100%;
+  margin: auto;
+  max-width: 1250px;
+}
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
 .hidden {
   display: none;
+}
+
+
+.flight-info {
+  background-color: aquamarine;
+  height: 400px;
+  width: 50%;
 }
