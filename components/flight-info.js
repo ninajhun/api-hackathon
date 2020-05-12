@@ -7,7 +7,7 @@ var settings = {
   "method": "GET",
   "headers": {
     "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-    "x-rapidapi-key": "f640a99fbbmsh905cff26b882c6fp1aef9fjsn97743e5f66fb"
+    "x-rapidapi-key": skyKey
   }
 }
 

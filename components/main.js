@@ -1,8 +1,8 @@
 
 
-var startButton = document.getElementById("start-button")
+var startingCity = document.getElementById("starting-city")
 
-startButton.addEventListener("click", function(){
+startingCity.addEventListener("change", function(){
   document.querySelector(".start-modal").classList.add("hidden");
   console.log("clicked!")
 })

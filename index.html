@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <link rel="stylesheet" href="map-style.css">
+  <title>API Hackathon</title>
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="map-style.css">
+
+
 </head>
 
 <body>
 
   <div class="start-modal">
-    <h1>Ready for an Adventure?</h1>
-    <button id="start-button">I'm feeling lucky</button>
+    <div class="vid-container">
+      <h1>Ready for an Adventure?</h1>
+    </div>
+
+    <form>
+      <select name="starting-city" id="starting-city">
+        <option value="" disabled selected>Select your starting city...</option>
+        <option value="Los Angeles">Los Angeles</option>
+      </select>
+    </form>
+
   </div>
 
   <header>
@@ -17,7 +31,11 @@
   </header>
 
   <main>
-    <div id="map"></div>
+    <div class="row">
+      <div id="map"></div>
+      <div class="flight-info"></div>
+    </div>
+
   </main>
 
   <div style="display: none">
@@ -40,7 +58,7 @@
 
 
 
-
+  <script src="config.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
   <!-- <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0sCDMw6TgrgIBdSenEM3-RKoLg5h1yfM&libraries=places&callback=initMap"
@@ -49,6 +67,7 @@
   <script src="components/flight-info.js"></script>
   <script src="components/directions.js"></script>
   <script src="components/geolocation.js"></script>
+
   <script src="components/main.js"></script>
 </body>
 

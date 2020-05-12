@@ -1,19 +1,13 @@
 /*
     /* Always set the map height explicitly to define the size of the div
          * element that contains the map.
+  */
+
+
     #map {
       height: 400px;
-      width: 80%;
-    } */
-
-    main, header {
-      display: flex;
-      justify-content: center;
-    }
-
-    #map {
-      height: 500px;
-      width: 80%;
+      width: 50%;
+      background-color: aqua;
     }
 
     .controls {
