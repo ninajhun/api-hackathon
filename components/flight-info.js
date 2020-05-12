@@ -1,4 +1,18 @@
 
+//get starting city value from form
+
+var startingCity = document.getElementById("starting-city")
+
+startingCity.addEventListener("change", getStartingCity);
+
+function getStartingCity() {
+  document.querySelector(".start-modal").classList.add("hidden");
+  console.log("clicked!")
+  console.log("starting city", startingCity.value);
+}
+
+
+
 
 var settings = {
   "async": true,

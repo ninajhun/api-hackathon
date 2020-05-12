@@ -3,9 +3,9 @@
 
 <head>
   <title>API Hackathon</title>
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="map-style.css">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/map-style.css">
 
 
 </head>
@@ -20,7 +20,8 @@
     <form>
       <select name="starting-city" id="starting-city">
         <option value="" disabled selected>Select your starting city...</option>
-        <option value="Los Angeles">Los Angeles</option>
+        <option value="los-angeles">Los Angeles</option>
+        <option value="orange-county">Orange County</option>
       </select>
     </form>
 
@@ -63,6 +64,7 @@
   <!-- <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0sCDMw6TgrgIBdSenEM3-RKoLg5h1yfM&libraries=places&callback=initMap"
     async defer></script> -->
+  <script src="components/header.js"></script>
   <script src="components/map.js"></script>
   <script src="components/flight-info.js"></script>
   <script src="components/directions.js"></script>
