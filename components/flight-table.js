@@ -11,7 +11,7 @@ class FlightTable {
     tbody.textContent = " ";
 
     // for (var i = 0; i < flightData.length; i++){
-      tbody.append(this.renderFlightRow(flightData)); [i];
+      tbody.append(this.renderFlightRow(flightData)); //[i];
     // }
     //renderFlightRow(flightData)
   }

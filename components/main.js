@@ -2,8 +2,9 @@
 var table = document.querySelector("table");
 var flightTable = new FlightTable(table);
 
-
-
+//new-random-city//
+var newCityButton = document.getElementById("random-button")
+var newRandomCity = new NewRandomCity(newCityButton);
 
 //app//
 var originAirport;
@@ -33,6 +34,6 @@ var randomAirportInfo = [
     coords: { lat: 35.6762, lng: 139.6503 }
   },
 ]
-var app = new App(originAirport, randomAirport, flightURL, startingCity, randomAirportInfo, flightTable);
+var app = new App(originAirport, randomAirport, flightURL, startingCity, randomAirportInfo, flightTable, newRandomCity);
 
 app.start();

@@ -1,11 +1,12 @@
 class App {
-  constructor(originAirport, randomAirport, flightURL, startingCity, randomAirportInfo, flightTable) {
+  constructor(originAirport, randomAirport, flightURL, startingCity, randomAirportInfo, flightTable, newRandomCity) {
     this.originAirport = originAirport;
     this.randomAirport = randomAirport;
     this.flightURL = flightURL;
     this.startingCity = startingCity;
     this.randomAirportInfo = randomAirportInfo;
     this.flightTable = flightTable;
+    this.newRandomCity = newRandomCity;
     this.handleFlightInfoSuccess = this.handleFlightInfoSuccess.bind(this);
     this.handleFlightInfoError = this.handleFlightInfoError.bind(this);
     this.getStartingCity = this.getStartingCity.bind(this);
@@ -16,6 +17,8 @@ class App {
 
   start() {
     this.startingCity.addEventListener("change", this.getFlightInfo);
+    // this.newRandomCity.onNewCityClick(this.newCity);
+
   }
 
   getStartingCity() {
