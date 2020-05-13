@@ -93,7 +93,7 @@ function getFlightInfo(){
 
   // var current-date = new Date()
 
-  flightURL = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/" + originAirport + "/" + randomAirport + "/2020-09-01?inboundpartialdate=2020-12-01"
+  flightURL = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/" + originAirport + "/" + randomAirport + "/" +"2020-09-01?inboundpartialdate=2020-12-01"
 
   var settings = {
     "async": true,
