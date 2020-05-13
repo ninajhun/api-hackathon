@@ -7,7 +7,6 @@ class App {
     this.randomAirportInfo = randomAirportInfo;
     this.handleFlightInfoSuccess = this.handleFlightInfoSuccess.bind(this);
     this.handleFlightInfoError = this.handleFlightInfoError.bind(this);
-    this.startingCity.addEventListener("change", this.getFlightInfo);
     this.getStartingCity = this.getStartingCity.bind(this);
     this.getRandomCity = this.getRandomCity.bind(this);
     this.getFlightInfo = this.getFlightInfo.bind(this);
@@ -15,10 +14,7 @@ class App {
   }
 
   start() {
-    // this.getFlightInfo.onSubmit(this.getFlightInfo);
     this.startingCity.addEventListener("change", this.getFlightInfo);
-
-
   }
 
   getStartingCity() {
@@ -33,7 +29,6 @@ class App {
     }
     return this.originAirport;
   }
-
 
   getRandomCity(array) {
     var updatedArray = [];
@@ -51,11 +46,10 @@ class App {
     header.append(headerText);
 
     document.getElementById("map").classList.remove("hidden");
-    initMap(updatedArray[0].city, updatedArray[0].coords)
+    this.initMap(updatedArray[0].city, updatedArray[0].coords)
 
     return this.randomAirport;
   }
-
 
   getFlightInfo() {
     this.getStartingCity();

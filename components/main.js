@@ -3,7 +3,7 @@ var randomAirport;
 var flightURL;
 
 var startingCity = document.getElementById("starting-city")   //get starting city value from form
-// startingCity.addEventListener("change", getFlightInfo);
+
 
 var randomAirportInfo = [
   {
@@ -30,11 +30,9 @@ var randomAirportInfo = [
 ]
 
 
-// var flightInfo = new FlightInfo(startingCity);
 
 
-//need to pass flightInfo,
-var app = new App(originAirport, randomAirport, flightURL, startingCity, randomAirportInfo);  //flightURL
+var app = new App(originAirport, randomAirport, flightURL, startingCity, randomAirportInfo);
 
 
 app.start();
