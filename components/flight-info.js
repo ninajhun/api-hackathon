@@ -11,17 +11,17 @@ randomAirportInfo = [
   {
     airportCode: "CDG",
     city: "Paris",
-    coords: { lat: 48.8566, lng: 2.3522}
+    coords: { lat: 48.8566, lng: 2.3522 }
   },
   {
     airportCode: "PEK",
     city: "Beijing",
-    coords: { lat: 39.9042, lng: 116.4074}
+    coords: { lat: 39.9042, lng: 116.4074 }
   },
   {
     airportCode: "LHR",
     city: "London",
-    coords: { lat: 51.5074, lng: 0.1278}
+    coords: { lat: 51.5074, lng: 0.1278 }
 
   },
   {
@@ -67,7 +67,7 @@ function getRandomCity(array) {
   randomAirport = updatedArray[0].airportCode;
 
   var header = document.querySelector("header");
-  var headerText = document.querySelector("h1");
+  var headerText = document.querySelector(".random-city-text");
   headerText.textContent = "Pack your bags, you're going to " + updatedArray[0].city + "!"
   header.append(headerText);
 
@@ -86,16 +86,16 @@ function initMap(pos, cityCoords) {  // Initialize and add the map
 }
 
 
-function getFlightInfo(){
+function getFlightInfo() {
 
   getStartingCity();
   getRandomCity(randomAirportInfo);
 
   // var current-date = new Date()
 
-  flightURL = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/" + originAirport + "/" + randomAirport + "/" +"2020-09-01?inboundpartialdate=2020-12-01"
+  flightURL = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/" + originAirport + "/" + randomAirport + "/" + "2020-09-01?inboundpartialdate=2020-12-01"
 
-  var settings = {
+  $.ajax({
     "async": true,
     "crossDomain": true,
     "url": flightURL,
@@ -103,11 +103,17 @@ function getFlightInfo(){
     "headers": {
       "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
       "x-rapidapi-key": skyKey
-    }
+    },
+    success: handleSuccess,
+    error: handleError
+  });
+
+  function handleSuccess(success) {
+    console.log(success);
   }
 
-  $.ajax(settings).done(function (response) {
-    console.log(response);
-  });
+  function handleError(error) {
+    console.log(error);
+  }
 
 }
