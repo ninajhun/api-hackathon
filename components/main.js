@@ -1,10 +1,13 @@
+//flight-info//
+// var flightTable =
+
+
+
+//app//
 var originAirport;
 var randomAirport;
 var flightURL;
-
 var startingCity = document.getElementById("starting-city")   //get starting city value from form
-
-
 var randomAirportInfo = [
   {
     airportCode: "CDG",
@@ -28,11 +31,6 @@ var randomAirportInfo = [
     coords: { lat: 35.6762, lng: 139.6503 }
   },
 ]
-
-
-
-
 var app = new App(originAirport, randomAirport, flightURL, startingCity, randomAirportInfo);
-
 
 app.start();
