@@ -18,7 +18,7 @@
   <div class="start-modal">
     <div class="vid-container">
       <video loop muted class="vid" width="1275" autoplay>
-        <source id ="travel-vid"  type="video/mp4">
+        <source id="travel-vid" type="video/mp4">
       </video>
 
       <h1 class="start-text">Are you ready for your <br>next Adventure?</h1>
@@ -26,7 +26,7 @@
     </div>
 
 
-    <h3> let us pick your next vacation... </h3>
+    <h2> let us pick your next vacation... </h2>
     <form>
       <select name="starting-city" id="starting-city">
         <option value="" disabled selected>Select your starting city...</option>
@@ -47,6 +47,7 @@
       <div id="map" class="hidden"></div>
       <div class="flight-info">
         <table>
+          <h3 class="info">Your Flight: </h3>
           <thead>
             <th>Airline</th>
             <th>Depart</th>
@@ -56,12 +57,13 @@
           <tbody>
           </tbody>
         </table>
+        <h4 class="info">
+          <a href="http://www.skyscanner.com" target="_blank">checkout out Skyscanner for the best prices!</a>
+        </h4>
       </div>
     </div>
 
   </main>
-
-
 
 
   <script src="components/start-page.js"></script>

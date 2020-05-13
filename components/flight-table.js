@@ -6,7 +6,6 @@ class FlightTable {
 
   onStartCityChosen(flightData) {
     this.flightData = flightData;
-    console.log("hi", this.flightData);
 
     var tbody = this.table.querySelector("tbody");
     tbody.textContent = " ";
@@ -28,7 +27,7 @@ class FlightTable {
     airline.textContent = flightTable.flightData.Carriers[0].Name
     depart.textContent = flightTable.flightData.Places[1].IataCode
     arrive.textContent = flightTable.flightData.Places[0].IataCode
-    price.textContent = flightTable.flightData.Quotes[0].MinPrice
+    price.textContent = "$" + flightTable.flightData.Quotes[0].MinPrice
 
     row.append(airline, depart, arrive, price);
 
