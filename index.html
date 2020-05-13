@@ -34,7 +34,7 @@
 
   <main>
     <div class="row">
-      <div id="map"></div>
+      <div id="map" class="hidden"></div>
       <div class="flight-info"></div>
     </div>
 
@@ -62,15 +62,16 @@
 
   <script src="config.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-  <!-- <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0sCDMw6TgrgIBdSenEM3-RKoLg5h1yfM&libraries=places&callback=initMap"
-    async defer></script> -->
+
   <script src="components/header.js"></script>
   <script src="components/map.js"></script>
 
   <script src="components/directions.js"></script>
   <script src="components/geolocation.js"></script>
   <script src="components/flight-info.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0sCDMw6TgrgIBdSenEM3-RKoLg5h1yfM&libraries=places&callback=initMap"
+    async defer></script>
   <script src="components/main.js"></script>
 </body>
 

@@ -9,20 +9,25 @@ startingCity.addEventListener("change", getFlightInfo);
 
 randomAirportInfo = [
   {
-    airportCode: "ATL",
-    city: "Atlanta"
+    airportCode: "CDG",
+    city: "Paris",
+    coords: { lat: 48.8566, lng: 2.3522}
   },
   {
     airportCode: "PEK",
-    city: "Beijing"
+    city: "Beijing",
+    coords: { lat: 39.9042, lng: 116.4074}
   },
   {
-    airportCode: "LAX",
-    city: "Los Angeles"
+    airportCode: "LHR",
+    city: "London",
+    coords: { lat: 51.5074, lng: 0.1278}
+
   },
   {
     airportCode: "HND",
-    city: "Tokyo"
+    city: "Tokyo",
+    coords: { lat: 35.6762, lng: 139.6503 }
   },
 
 ]
@@ -51,7 +56,6 @@ function getStartingCity() {
 }
 
 
-
 function getRandomCity(array) {
   var updatedArray = [];
   for (var index = 0; index < array.length; index++) {
@@ -67,9 +71,19 @@ function getRandomCity(array) {
   headerText.textContent = "Pack your bags, you're going to " + updatedArray[0].city + "!"
   header.append(headerText);
 
+  document.getElementById("map").classList.remove("hidden");
+  initMap(updatedArray[0].city, updatedArray[0].coords)
+
   return randomAirport;
 }
 
+
+function initMap(pos, cityCoords) {  // Initialize and add the map
+  var pos = cityCoords    // The location of city
+  var map = new google.maps.Map(     // The map, centered at city
+    document.getElementById('map'), { zoom: 4, center: pos });
+  var marker = new google.maps.Marker({ position: pos, map: map });  // The marker, positioned at city
+}
 
 
 function getFlightInfo(){
@@ -77,7 +91,9 @@ function getFlightInfo(){
   getStartingCity();
   getRandomCity(randomAirportInfo);
 
-  flightURL = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/" + originAirport + "/" + randomAirport + "/2020-09-01?inboundpartialdate=2020-12-01"
+  // var current-date = new Date()
+
+  flightURL = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/" + originAirport + "/" + randomAirport + "/" +"2020-09-01?inboundpartialdate=2020-12-01"
 
   var settings = {
     "async": true,
