@@ -1,9 +1,0 @@
-class FlightInfo {
-  constructor(startingCity) {
-
-  }
-
-
-
-
-}

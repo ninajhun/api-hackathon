@@ -1,5 +1,7 @@
 //flight-info//
-// var flightTable =
+var table = document.querySelector("table");
+var flightTable = new FlightTable(table);
+
 
 
 
@@ -31,6 +33,6 @@ var randomAirportInfo = [
     coords: { lat: 35.6762, lng: 139.6503 }
   },
 ]
-var app = new App(originAirport, randomAirport, flightURL, startingCity, randomAirportInfo);
+var app = new App(originAirport, randomAirport, flightURL, startingCity, randomAirportInfo, flightTable);
 
 app.start();
