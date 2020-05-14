@@ -3,7 +3,6 @@ class FlightTable {
     this.table = table;
   }
 
-
   onStartCityChosen(flightData) {
     this.flightData = flightData;
 
@@ -15,7 +14,6 @@ class FlightTable {
     // }
     //renderFlightRow(flightData)
   }
-
 
   renderFlightRow(data){
     var row = document.createElement("tr");

@@ -1,12 +1,17 @@
 class NewRandomCity {
   constructor(newCityButton){
     this.newCityButton = newCityButton;
-    this.newCity = this.newCity.bind(this);
-    this.newCityButton.addEventListener("click", this.newCity);
+    this.onNewCityClick = this.onNewCityClick.bind(this);
+    this.getNewRandomCity = this.getNewRandomCity.bind(this);
+    this.newCityButton.addEventListener("click", this.getNewRandomCity);
   }
 
-   newCity() {
-    console.log("hi");
+   onNewCityClick(getFlightInfo) {
+     this.getFlightInfo = getFlightInfo;
+  }
+
+  getNewRandomCity() {
+    this.getFlightInfo();
   }
 
 }
