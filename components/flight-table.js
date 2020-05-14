@@ -3,7 +3,6 @@ class FlightTable {
     this.table = table;
   }
 
-
   onStartCityChosen(flightData) {
     this.flightData = flightData;
 
@@ -11,11 +10,10 @@ class FlightTable {
     tbody.textContent = " ";
 
     // for (var i = 0; i < flightData.length; i++){
-      tbody.append(this.renderFlightRow(flightData)); [i];
+      tbody.append(this.renderFlightRow(flightData)); //[i];
     // }
     //renderFlightRow(flightData)
   }
-
 
   renderFlightRow(data){
     var row = document.createElement("tr");

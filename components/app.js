@@ -1,11 +1,12 @@
 class App {
-  constructor(originAirport, randomAirport, flightURL, startingCity, randomAirportInfo, flightTable) {
+  constructor(originAirport, randomAirport, flightURL, startingCity, randomAirportInfo, flightTable, newRandomCity) {
     this.originAirport = originAirport;
     this.randomAirport = randomAirport;
     this.flightURL = flightURL;
     this.startingCity = startingCity;
     this.randomAirportInfo = randomAirportInfo;
     this.flightTable = flightTable;
+    this.newRandomCity = newRandomCity;
     this.handleFlightInfoSuccess = this.handleFlightInfoSuccess.bind(this);
     this.handleFlightInfoError = this.handleFlightInfoError.bind(this);
     this.getStartingCity = this.getStartingCity.bind(this);
@@ -16,17 +17,18 @@ class App {
 
   start() {
     this.startingCity.addEventListener("change", this.getFlightInfo);
+    this.newRandomCity.onNewCityClick(this.getFlightInfo);
   }
 
   getStartingCity() {
     document.querySelector(".start-modal").classList.add("hidden");
 
     if (this.startingCity.value === "los-angeles") {
-      this.originAirport = "LAX-sky";
+      this.originAirport = "LAX";
     } else if (this.startingCity.value === "orange-county") {
-      this.originAirport = "SNA-sky"
+      this.originAirport = "SNA"
     } else if (this.startingCity.value === "new-york") {
-      this.originAirport = "JFK-sky"
+      this.originAirport = "JFK"
     }
     return this.originAirport;
   }
@@ -34,7 +36,6 @@ class App {
   getRandomCity(array) {
     var updatedArray = [];
     for (var index = 0; index < array.length; index++) {
-      array[index].airportCode += "-sky"
       updatedArray.push(array[index]);
     }
 
@@ -55,7 +56,7 @@ class App {
   getFlightInfo() {
     this.getStartingCity();
     this.getRandomCity(this.randomAirportInfo);
-    this.flightURL = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/" + this.originAirport + "/" + this.randomAirport + "/" + "2020-09-01?inboundpartialdate=2020-12-01"
+    this.flightURL = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/" + this.originAirport + "-sky/" + this.randomAirport + "-sky/" + "2020-09-01?inboundpartialdate=2020-12-01"
     console.log(this.flightURL)
 
     $.ajax({
@@ -95,5 +96,6 @@ class App {
       document.getElementById('map'), { zoom: 4, center: pos });
     var marker = new google.maps.Marker({ position: pos, map: map });  // The marker, positioned at city
   }
+
 
 }
