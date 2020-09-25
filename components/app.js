@@ -19,7 +19,6 @@ class App {
     this.startingCity.addEventListener("change", this.getFlightInfo);
     this.newRandomCity.onNewCityClick(this.getFlightInfo);
 
-    // console.log(this.randomAirportInfo)
   }
 
   getFlightInfo() {
@@ -72,11 +71,10 @@ class App {
     // header.append(headerText);
 
     document.getElementById("map").classList.remove("hidden");
-    this.initMap(updatedArray[0].city, updatedArray[0].coords)
+    this.initMap(updatedArray[0].latitude_deg, updatedArray[0].longitude_deg)
 
     return this.randomAirport;
   }
-
 
 
   handleFlightInfoSuccess(flightInfo) {
@@ -96,12 +94,19 @@ class App {
     }
   }
 
-  initMap(pos, cityCoords) {  // Initialize and add the map
-    var pos = cityCoords    // The location of city
+  // initMap(pos, cityCoords) {  // Initialize and add the map
+  //   var pos = cityCoords    // The location of city
+  //   var map = new google.maps.Map(     // The map, centered at city
+  //     document.getElementById('map'), { zoom: 4, center: pos });
+  //   var marker = new google.maps.Marker({ position: pos, map: map });  // The marker, positioned at city
+  // }
+
+  initMap(latitude_deg, longitude_deg) {  // Initialize and add the map
+    var pos = {lat: latitude_deg, lng: longitude_deg} // The location of city
+
     var map = new google.maps.Map(     // The map, centered at city
       document.getElementById('map'), { zoom: 4, center: pos });
     var marker = new google.maps.Marker({ position: pos, map: map });  // The marker, positioned at city
   }
-
 
 }
