@@ -17,7 +17,11 @@ class App {
 
   start() {
     this.startingCity.addEventListener("change", this.getFlightInfo);
-    this.newCityButton.addEventListener("click", this.getFlightInfo);
+
+    this.newCityButton.addEventListener("click", () => {
+      document.querySelector("main").classList.add("hidden");
+      document.querySelector("header").classList.add("hidden");
+     this.getFlightInfo()})
   }
 
   getFlightInfo() {
@@ -32,6 +36,8 @@ class App {
       "crossDomain": true,
       "url": this.flightURL,
       "method": "GET",
+      "beforeSend": () => document.getElementById("loading-screen").classList.remove("hidden"),
+      "complete": () => document.getElementById("loading-screen").classList.add("hidden"),
       "headers": {
         "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
         "x-rapidapi-key": skyKey
@@ -40,6 +46,7 @@ class App {
       error: this.handleFlightInfoError
     });
   }
+
 
   getStartingCity() {
     document.querySelector(".start-modal").classList.add("hidden");
@@ -64,14 +71,16 @@ class App {
     header.append(headerText);
 
     document.getElementById("map").classList.remove("hidden");
-    // this.initMap(array[0].latitude_deg, array[0].longitude_deg)  //UNCOMMENT LATER
+    this.initMap(array[0].latitude_deg, array[0].longitude_deg)
 
     return this.randomAirport;
   }
 
 
   handleFlightInfoSuccess(flightInfo) {
-      this.flightTable.onStartCityChosen(flightInfo)
+    document.querySelector("main").classList.remove("hidden");
+    document.querySelector("header").classList.remove("hidden");
+    this.flightTable.onStartCityChosen(flightInfo)
   }
 
   handleFlightInfoError(error) {
