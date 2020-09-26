@@ -3,32 +3,30 @@
       justify-content: center;
     }
 
+* {
+  font-family: Pacifico, Arial, Helvetica, sans-serif;
+  color: rgb(62, 106, 199);
+  text-align: center;
+
+}
 h1 {
   font-family: Arvo, Helvetica, sans-serif;
 }
 
 h2 {
-  color: rgb(62, 106, 199);
-  font-family: Pacifico, Arial, Helvetica, sans-serif;
   font-size: 2rem;
 }
 
-
 h3 {
-  color: rgb(62, 106, 199);
-  font-family: Pacifico, Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
-  text-align: center;
 }
 
 h4 {
-  color: rgb(62, 106, 199);
-  font-family: Pacifico, Arial, Helvetica, sans-serif;
-  text-align: right;
+   font-family: Arvo, Helvetica, sans-serif;
 }
 
 a:link {
-   color: rgb(62, 106, 199);
+  color: rgb(62, 106, 199);
   text-decoration: none;
 }
 a:hover {
@@ -105,6 +103,32 @@ select:hover {
   border-color: rgb(62, 106, 199)
 }
 
+/*LOADING PAGE */
+.loading {
+  width: 50px;
+  height:40px;
+  margin: 40px auto;
+}
+
+.loading--plane {
+  width: 70px;
+  stroke-dasharray: 425.59;
+  stroke-dashoffset: 425.59;
+  animation: plane-loading-animation 3s linear infinite;
+}
+
+@keyframes plane-loading-animation {
+  50% {
+    stroke-dashoffset: 425.59;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -425.59;
+  }
+}
+
 /* MAIN */
 main {
   width: 100%;
@@ -156,6 +180,9 @@ th {
 .info{
   margin: 10px;
 }
+
+
+
 
 /*HIDDEN */
 

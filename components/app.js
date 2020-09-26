@@ -1,38 +1,43 @@
 class App {
-  constructor(originAirport, randomAirport, flightURL, startingCity, airports, flightTable, newRandomCity) {
+  constructor(originAirport, randomAirport, flightURL, startingCity, airports, flightTable, newCityButton, initMap) { //initMap
     this.originAirport = null;
     this.randomAirport = null;
     this.flightURL = null;
     this.startingCity = startingCity;
     this.airports = airports;
     this.flightTable = flightTable;
-    this.newRandomCity = newRandomCity;
+    this.newCityButton = newCityButton;
     this.handleFlightInfoSuccess = this.handleFlightInfoSuccess.bind(this);
     this.handleFlightInfoError = this.handleFlightInfoError.bind(this);
     this.getStartingCity = this.getStartingCity.bind(this);
     this.getRandomCity = this.getRandomCity.bind(this);
     this.getFlightInfo = this.getFlightInfo.bind(this);
-    this.initMap = this.initMap.bind(this);
+    this.initMap = initMap;
   }
 
   start() {
     this.startingCity.addEventListener("change", this.getFlightInfo);
-    this.newRandomCity.onNewCityClick(this.getFlightInfo);
 
+    this.newCityButton.addEventListener("click", () => {
+      document.querySelector("main").classList.add("hidden");
+      document.querySelector("header").classList.add("hidden");
+     this.getFlightInfo()})
   }
 
   getFlightInfo() {
+    const outboundDate = (new Date()).toISOString().split('T')[0];
+
     this.getStartingCity();
     this.getRandomCity(this.airports);
-    this.flightURL = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/${this.originAirport}-sky/${this.randomAirport}-sky/2020-12-01?inboundpartialdate=2020-12-01`
-    //need to change outbound date to use Date()
-
+    this.flightURL = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/${this.originAirport}-sky/${this.randomAirport}-sky/${outboundDate}?inboundpartialdate=2020-12-01`
 
     $.ajax({
       "async": true,
       "crossDomain": true,
       "url": this.flightURL,
       "method": "GET",
+      "beforeSend": () => document.querySelector(".loading").classList.remove("hidden"),
+      "complete": () => document.querySelector(".loading").classList.add("hidden"),
       "headers": {
         "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
         "x-rapidapi-key": skyKey
@@ -41,6 +46,7 @@ class App {
       error: this.handleFlightInfoError
     });
   }
+
 
   getStartingCity() {
     document.querySelector(".start-modal").classList.add("hidden");
@@ -56,28 +62,25 @@ class App {
   }
 
   getRandomCity(array) {
-    var updatedArray = [];
-    for (var index = 0; index < array.length; index++) {
-      updatedArray.push(array[index]);
-    }   //is this necessary?
-
-    this.shuffle(updatedArray);
-    this.randomAirport = updatedArray[0].iata_code;
+    this.shuffle(array);
+    this.randomAirport = array[0].iata_code;
 
     var header = document.querySelector("header");
     var headerText = document.querySelector(".random-city-text");
-    headerText.textContent = "Pack your bags, you're going to " + updatedArray[0].municipality + "!"
+    headerText.textContent = "Pack your bags, you're going to " + array[0].municipality + "!"
     header.append(headerText);
 
     document.getElementById("map").classList.remove("hidden");
-    this.initMap(updatedArray[0].latitude_deg, updatedArray[0].longitude_deg)
+    this.initMap(array[0].latitude_deg, array[0].longitude_deg)
 
     return this.randomAirport;
   }
 
 
   handleFlightInfoSuccess(flightInfo) {
-      this.flightTable.onStartCityChosen(flightInfo)
+    document.querySelector("main").classList.remove("hidden");
+    document.querySelector("header").classList.remove("hidden");
+    this.flightTable.onStartCityChosen(flightInfo)
   }
 
   handleFlightInfoError(error) {
@@ -93,11 +96,6 @@ class App {
     }
   }
 
-  initMap(latitude_deg, longitude_deg) {  // Initialize and add the map
-    var pos = {lat: latitude_deg, lng: longitude_deg} // The location of city
-    var map = new google.maps.Map(     // The map, centered at city
-      document.getElementById('map'), { zoom: 6, center: pos });
-    var marker = new google.maps.Marker({ position: pos, map: map });  // The marker, positioned at city
-  }
+
 
 }
