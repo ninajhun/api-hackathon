@@ -22,11 +22,11 @@ class App {
   }
 
   getFlightInfo() {
+    const outboundDate = (new Date()).toISOString().split('T')[0];
+
     this.getStartingCity();
     this.getRandomCity(this.airports);
-    this.flightURL = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/${this.originAirport}-sky/${this.randomAirport}-sky/2020-12-01?inboundpartialdate=2020-12-01`
-    //need to change outbound date to use Date()
-
+    this.flightURL = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/${this.originAirport}-sky/${this.randomAirport}-sky/${outboundDate}?inboundpartialdate=2020-12-01`
 
     $.ajax({
       "async": true,
@@ -70,7 +70,7 @@ class App {
     header.append(headerText);
 
     document.getElementById("map").classList.remove("hidden");
-    this.initMap(updatedArray[0].latitude_deg, updatedArray[0].longitude_deg)
+    // this.initMap(updatedArray[0].latitude_deg, updatedArray[0].longitude_deg)  //UNCOMMENT
 
     return this.randomAirport;
   }
