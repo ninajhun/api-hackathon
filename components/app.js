@@ -4,7 +4,7 @@ class App {
     this.randomAirport = null;
     this.flightURL = null;
     this.startingCity = startingCity;
-    this.airports = airports;  //change to airports later
+    this.airports = airports;
     this.flightTable = flightTable;
     this.newRandomCity = newRandomCity;
     this.handleFlightInfoSuccess = this.handleFlightInfoSuccess.bind(this);
@@ -26,7 +26,7 @@ class App {
     this.getRandomCity(this.airports);
     this.flightURL = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/${this.originAirport}-sky/${this.randomAirport}-sky/2020-12-01?inboundpartialdate=2020-12-01`
     //need to change outbound date to use Date()
-    // console.log(this.flightURL)
+
 
     $.ajax({
       "async": true,
