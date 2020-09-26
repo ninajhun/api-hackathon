@@ -1,5 +1,5 @@
 class App {
-  constructor(originAirport, randomAirport, flightURL, startingCity, airports, flightTable, newRandomCity) {
+  constructor(originAirport, randomAirport, flightURL, startingCity, airports, flightTable, newRandomCity, initMap) { //initMap
     this.originAirport = null;
     this.randomAirport = null;
     this.flightURL = null;
@@ -12,13 +12,13 @@ class App {
     this.getStartingCity = this.getStartingCity.bind(this);
     this.getRandomCity = this.getRandomCity.bind(this);
     this.getFlightInfo = this.getFlightInfo.bind(this);
-    this.initMap = this.initMap.bind(this);
+    // this.initMap = this.initMap.bind(this);
+    this.initMap = initMap;
   }
 
   start() {
     this.startingCity.addEventListener("change", this.getFlightInfo);
     this.newRandomCity.onNewCityClick(this.getFlightInfo);
-
   }
 
   getFlightInfo() {
@@ -70,7 +70,7 @@ class App {
     header.append(headerText);
 
     document.getElementById("map").classList.remove("hidden");
-    // this.initMap(updatedArray[0].latitude_deg, updatedArray[0].longitude_deg)  //UNCOMMENT
+    this.initMap(updatedArray[0].latitude_deg, updatedArray[0].longitude_deg)
 
     return this.randomAirport;
   }
@@ -93,11 +93,11 @@ class App {
     }
   }
 
-  initMap(latitude_deg, longitude_deg) {  // Initialize and add the map
-    var pos = {lat: latitude_deg, lng: longitude_deg} // The location of city
-    var map = new google.maps.Map(     // The map, centered at city
-      document.getElementById('map'), { zoom: 6, center: pos });
-    var marker = new google.maps.Marker({ position: pos, map: map });  // The marker, positioned at city
-  }
+  // initMap(latitude_deg, longitude_deg) {  // Initialize and add the map
+  //   var pos = {lat: latitude_deg, lng: longitude_deg} // The location of city
+  //   var map = new google.maps.Map(     // The map, centered at city
+  //     document.getElementById('map'), { zoom: 6, center: pos });
+  //   var marker = new google.maps.Marker({ position: pos, map: map });  // The marker, positioned at city
+  // }
 
 }

@@ -3,32 +3,33 @@
       justify-content: center;
     }
 
+
+* {
+  font-family: Pacifico, Arial, Helvetica, sans-serif;
+  color: rgb(62, 106, 199);
+  text-align: center;
+
+}
 h1 {
   font-family: Arvo, Helvetica, sans-serif;
 }
 
 h2 {
-  color: rgb(62, 106, 199);
-  font-family: Pacifico, Arial, Helvetica, sans-serif;
   font-size: 2rem;
 }
 
-
 h3 {
-  color: rgb(62, 106, 199);
-  font-family: Pacifico, Arial, Helvetica, sans-serif;
+
   font-size: 1.5rem;
-  text-align: center;
+  te
 }
 
 h4 {
-  color: rgb(62, 106, 199);
-  font-family: Pacifico, Arial, Helvetica, sans-serif;
-  text-align: right;
+   font-family: Arvo, Helvetica, sans-serif;
 }
 
 a:link {
-   color: rgb(62, 106, 199);
+  color: rgb(62, 106, 199);
   text-decoration: none;
 }
 a:hover {

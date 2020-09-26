@@ -39,8 +39,8 @@
     <div class="row">
       <div id="map" class="hidden"></div>
       <div class="flight-info">
+        <h3 class="info">Your Flight: </h3>
         <table id="flights-table">
-          <h3 class="info">Your Flight: </h3>
           <thead>
             <th>Airline</th>
             <th>Depart</th>
@@ -52,32 +52,35 @@
         </table>
 
         <div id="no-flights-message" class="hidden">
-         <h3>There are no flights currently. Check skyscanner or try again.</h3>
+          <h4>There are no flights currently. </br> Check skyscanner for more options or try again.</h4>
         </div>
 
+        <div>
 
-        <h4 class="info">
-          <a href="http://www.skyscanner.com" target="_blank">checkout out Skyscanner for the best prices!</a>
-        </h4>
-        <button id="random-button">Give me a new location!</button>
+          <button id="random-button">Give me a new location!</button>
+          <h4 class="info">
+            <a href="http://www.skyscanner.com" target="_blank">checkout out Skyscanner for the best prices!</a>
+          </h4>
+
+        </div>
+
       </div>
+
     </div>
+  </main>
 
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
   <script src="config.js"></script>
   <script src="components/start-page.js"></script>
   <script src="components/airports.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
   <script src="components/flight-table.js"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0sCDMw6TgrgIBdSenEM3-RKoLg5h1yfM&libraries=places&callback=initMap"
-    async defer></script>
   <script src="components/new-random-city.js"></script>
   <script src="components/app.js"></script>
   <script src="components/main.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0sCDMw6TgrgIBdSenEM3-RKoLg5h1yfM&libraries=places&callback=initMap"
+    async defer></script>
 
-  </main>
 </body>
 
 </html>
