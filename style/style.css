@@ -112,6 +112,7 @@ select:hover {
 
 .loading--plane {
   width: 70px;
+  /* color: rgb(62, 106, 199); */
   stroke-dasharray: 425.59;
   stroke-dashoffset: 425.59;
   animation: plane-loading-animation 3s linear infinite;
