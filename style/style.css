@@ -104,18 +104,29 @@ select:hover {
 }
 
 /*LOADING PAGE */
-.loading-screen{
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: top;
-  flex-direction: column;
-  font-size: 1.5rem ;
-  background-color: blue;
+.loading {
+  width: 50px;
+  height:40px;
+  margin: 40px auto;
+}
+
+.loading--plane {
+  width: 70px;
+  stroke-dasharray: 425.59;
+  stroke-dashoffset: 425.59;
+  animation: plane-loading-animation 3s linear infinite;
+}
+
+@keyframes plane-loading-animation {
+  50% {
+    stroke-dashoffset: 425.59;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -425.59;
+  }
 }
 
 /* MAIN */

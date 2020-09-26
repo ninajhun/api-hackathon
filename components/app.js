@@ -36,8 +36,8 @@ class App {
       "crossDomain": true,
       "url": this.flightURL,
       "method": "GET",
-      "beforeSend": () => document.getElementById("loading-screen").classList.remove("hidden"),
-      "complete": () => document.getElementById("loading-screen").classList.add("hidden"),
+      "beforeSend": () => document.querySelector(".loading").classList.remove("hidden"),
+      "complete": () => document.querySelector(".loading").classList.add("hidden"),
       "headers": {
         "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
         "x-rapidapi-key": skyKey
