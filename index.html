@@ -7,22 +7,15 @@
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/map-style.css">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-
   <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
-
-
 </head>
 
 <body>
 
   <div class="start-modal">
     <div class="vid-container">
-      <video loop muted class="vid" width="1275" autoplay>
-        <!-- <source id="travel-vid" type="video/mp4"> -->
-      </video>
-
+      <video loop muted class="vid" width="1275" autoplay></video>
       <h1 class="start-text">Are you ready for your <br>next Adventure?</h1>
-
     </div>
 
 
@@ -46,7 +39,7 @@
     <div class="row">
       <div id="map" class="hidden"></div>
       <div class="flight-info">
-        <table>
+        <table id="flights-table">
           <h3 class="info">Your Flight: </h3>
           <thead>
             <th>Airline</th>
@@ -57,6 +50,12 @@
           <tbody>
           </tbody>
         </table>
+
+        <div id="no-flights-message" class="hidden">
+         <h3>There are no flights currently. Check skyscanner or try again.</h3>
+        </div>
+
+
         <h4 class="info">
           <a href="http://www.skyscanner.com" target="_blank">checkout out Skyscanner for the best prices!</a>
         </h4>
@@ -67,6 +66,7 @@
 
   <script src="config.js"></script>
   <script src="components/start-page.js"></script>
+  <script src="components/airports.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
   <script src="components/flight-table.js"></script>
