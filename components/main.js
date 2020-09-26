@@ -4,8 +4,6 @@ var flightTable = new FlightTable(table);
 
 //new-random-city//
 var newCityButton = document.getElementById("random-button")
-// var newRandomCity = document.getElementById("random-button")
-// var newRandomCity = new NewRandomCity(newCityButton);
 
 //app//
 var originAirport;
