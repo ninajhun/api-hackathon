@@ -19,7 +19,7 @@ var startingCity = document.getElementById("starting-city")
 function initMap(latitude_deg, longitude_deg) {
   var pos = { lat: latitude_deg, lng: longitude_deg }
   var map = new google.maps.Map(
-    document.getElementById('map'), { zoom: 6, center: pos });
+    document.getElementById('map'), { zoom: 9, center: pos });
   var marker = new google.maps.Marker({ position: pos, map: map });
 }
 
