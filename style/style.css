@@ -1,16 +1,11 @@
- main, header {
-      display: flex;
-      justify-content: center;
-    }
-
 * {
   font-family: Pacifico, Arial, Helvetica, sans-serif;
   color: rgb(62, 106, 199);
-  text-align: center;
-
 }
+
 h1 {
   font-family: Arvo, Helvetica, sans-serif;
+
 }
 
 h2 {
@@ -22,7 +17,9 @@ h3 {
 }
 
 h4 {
-   font-family: Arvo, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-family: Arvo, Helvetica, sans-serif;
+  text-align: center;
 }
 
 a:link {
@@ -34,25 +31,34 @@ a:hover {
   text-decoration: underline;
 }
 
-a:visited {
-  color: rgb(194, 194, 194);
-  background-color: transparent;
-  text-decoration: none;
-}
 
 button {
   background-color: rgb(62, 106, 199);
+  width: 220px;
+  margin: 10px;
   font-family: Arvo, Helvetica, sans-serif;
   border: none;
   color: white;
   padding: 10px 32px;
-  font-size: 10px;
+  font-size: .75rem;
   outline: none;
 }
 
 button:hover {
   background-color: rgb(145, 186, 240);
   color: black;
+}
+
+/* HEADER */
+
+header{
+  background-color: rgb(62, 106, 199);
+  display: flex;
+  justify-content: center;
+}
+
+header h1 {
+  color: white
 }
 
 /* START PAGE */
@@ -104,6 +110,19 @@ select:hover {
 }
 
 /*LOADING PAGE */
+
+.loading-modal{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem ;
+  background-color: white;
+}
+
 .loading {
   width: 50px;
   height:40px;
@@ -116,6 +135,7 @@ select:hover {
   stroke-dashoffset: 425.59;
   animation: plane-loading-animation 3s linear infinite;
 }
+
 
 @keyframes plane-loading-animation {
   50% {
@@ -132,17 +152,10 @@ select:hover {
 /* MAIN */
 main {
   width: 100%;
-  margin: auto;
+  margin-top: 15px;
   max-width: 1250px;
   display: flex;
   align-items: center;
-}
-.row {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5px;
-  justify-content: center;
 }
 
 .flight-info {
@@ -152,6 +165,12 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
+}
+
+.button-row{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
@@ -160,7 +179,7 @@ main {
 table {
   border-collapse: collapse;
   width: 100%;
-
+  font-weight: bold;
 }
 
 table, th, td {
@@ -169,12 +188,13 @@ table, th, td {
 }
 
 th,td {
-  height: 33px;
+  height: 75px;
   text-align: center;
 }
 
 th {
   background-color: rgb(145, 186, 240);
+  color: rgb(32, 32, 32);
 }
 
 .info{
@@ -182,7 +202,12 @@ th {
 }
 
 
+/*FOOTER */
 
+footer {
+  position: relative;
+  top: 10px;
+}
 
 /*HIDDEN */
 

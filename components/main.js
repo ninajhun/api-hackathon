@@ -1,4 +1,7 @@
 
+//flight-details-button
+var flightDetailsButton = document.getElementById("flight-details-button")
+
 //flight-info//
 var table = document.querySelector("table");
 var flightTable = new FlightTable(table);
@@ -10,6 +13,7 @@ var newCityButton = document.getElementById("random-button")
 var originAirport;
 var randomAirport;
 var flightURL;
+const outboundDate = (new Date()).toISOString().split('T')[0];
 var startingCity = document.getElementById("starting-city")
 
 function initMap(latitude_deg, longitude_deg) {
@@ -19,7 +23,17 @@ function initMap(latitude_deg, longitude_deg) {
   var marker = new google.maps.Marker({ position: pos, map: map });
 }
 
-var app = new App(originAirport, randomAirport, flightURL, startingCity, airports, flightTable, newCityButton, initMap); // initMap
+var app = new App(
+  outboundDate,
+  originAirport,
+  randomAirport,
+  flightURL,
+  startingCity,
+  airports,
+  flightTable,
+  newCityButton,
+  flightDetailsButton,
+  initMap);
 
 
 app.start();
