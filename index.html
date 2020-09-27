@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/map-style.css">
   <link rel="stylesheet" href="style/grid.css">
+  <link rel="stylesheet" href="style/responsiveness.css">
   <link rel="icon" href="/img/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
@@ -52,30 +53,36 @@
 
     <div class="row">
 
-      <div id="map" class="hidden"></div>
+      <div id="map" class="hidden col-7"></div>
 
-      <div class="flight-info">
-        <h3 class="info">Your Flight: </h3>
-        <table id="flights-table">
-          <thead>
-            <th>Airline</th>
-            <th>Depart</th>
-            <th>Arrive</th>
-            <th>Price</th>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
+      <div class="flight-info col-5">
 
-        <div id="no-flights-message" class="hidden">
-          <h4>There are no flights currently. </br> Check Skyscanner for more options or try again.</h4>
+        <div class="row">
+          <h3 class="info">Your Flight: </h3>
+          <table id="flights-table">
+            <thead>
+              <th>Airline</th>
+              <th>Depart</th>
+              <th>Arrive</th>
+              <th>Price</th>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+
+          <div id="no-flights-message" class="hidden">
+            <h4>There are no flights currently. </br> Check Skyscanner for more options or try again.</h4>
+          </div>
+
         </div>
 
-        <!-- <div> -->
-        <button id="flight-details-button">Book now on Skyscanner!</button>
-        <button id="random-button">Give me a new location!</button>
+        <div class="row button-row">
+          <button id="flight-details-button">Book now on Skyscanner!</button>
+          <button id="random-button">Give me a new location!</button>
+        </div>
 
-        <!-- </div> -->
+
+
 
       </div>
     </div>

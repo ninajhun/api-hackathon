@@ -1,14 +1,8 @@
- main, header {
-      display: flex;
-      justify-content: center;
-    }
-
 * {
   font-family: Pacifico, Arial, Helvetica, sans-serif;
   color: rgb(62, 106, 199);
-  text-align: center;
-
 }
+
 h1 {
   font-family: Arvo, Helvetica, sans-serif;
 
@@ -23,7 +17,9 @@ h3 {
 }
 
 h4 {
-   font-family: Arvo, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-family: Arvo, Helvetica, sans-serif;
+  text-align: center;
 }
 
 a:link {
@@ -38,8 +34,8 @@ a:hover {
 
 button {
   background-color: rgb(62, 106, 199);
-  width: 250px;
-  margin-top: 10px;
+  width: 220px;
+  margin: 10px;
   font-family: Arvo, Helvetica, sans-serif;
   border: none;
   color: white;
@@ -57,7 +53,8 @@ button:hover {
 
 header{
   background-color: rgb(62, 106, 199);
-
+  display: flex;
+  justify-content: center;
 }
 
 header h1 {
@@ -127,7 +124,6 @@ select:hover {
 }
 
 .loading {
-  /* position: relative; */
   width: 50px;
   height:40px;
   margin: 40px auto;
@@ -162,21 +158,6 @@ main {
   align-items: center;
 }
 
-/* .container {
-  width: 100%;
-  max-width: 1250px;
-  margin: auto;
-  padding: 10px;
-}
-
-.row {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5px;
-  justify-content: center;
-} */
-
 .flight-info {
   height: 400px;
   width: 40%;
@@ -184,6 +165,12 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
+}
+
+.button-row{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
@@ -192,7 +179,7 @@ main {
 table {
   border-collapse: collapse;
   width: 100%;
-
+  font-weight: bold;
 }
 
 table, th, td {
@@ -201,12 +188,13 @@ table, th, td {
 }
 
 th,td {
-  height: 33px;
+  height: 75px;
   text-align: center;
 }
 
 th {
   background-color: rgb(145, 186, 240);
+  color: rgb(32, 32, 32);
 }
 
 .info{

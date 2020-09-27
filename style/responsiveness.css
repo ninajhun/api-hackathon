@@ -1,0 +1,119 @@
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12 {
+    max-width: 100%;
+    }
+
+    h1.start-text {
+      font-size: 5rem;
+      text-shadow: 2px 2px 4px #000000;
+    }
+
+    h2 {
+      font-size: 3.75rem;
+    }
+
+    .vid-container {
+        height: 73%;
+    }
+
+    select {
+        font-size: 3rem;
+    }
+
+}
+
+/* Landscape */
+  @media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+    select {
+     font-size: 1.25rem;
+    }
+
+    .vid-container {
+      height: 64%;
+    }
+}
+
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    h1.start-text {
+      font-size: 4rem;
+    }
+
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+     .vid-container {
+        height: 75%;
+    }
+
+    select {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    select {
+      font-size: 1.25rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+}
