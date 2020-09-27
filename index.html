@@ -47,8 +47,12 @@
   </header>
 
   <main class="hidden">
+
     <div class="row">
+
       <div id="map" class="hidden"></div>
+
+
       <div class="flight-info">
         <h3 class="info">Your Flight: </h3>
         <table id="flights-table">
@@ -66,17 +70,25 @@
           <h4>There are no flights currently. </br> Check skyscanner for more options or try again.</h4>
         </div>
 
-        <div>
+        <!-- <div> -->
+          <button id="flight-details-button">Check out Flight Details!</button>
           <button id="random-button">Give me a new location!</button>
-          <h4 class="">
-            <a href="http://www.skyscanner.com" target="_blank">checkout out Skyscanner for the best prices!</a>
-          </h4>
-        </div>
+
+        <!-- </div> -->
 
       </div>
     </div>
 
   </main>
+
+  <footer class="hidden">
+    <h4 class="">
+      <a href="http://www.skyscanner.com" target="_blank"></a>
+      This app uses cached results from the Skyscanner database. Please visit Skyscanner's website for more up to date
+      flight quotes.
+    </h4>
+
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
   <script src="config.js"></script>

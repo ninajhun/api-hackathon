@@ -1,5 +1,5 @@
 class App {
-  constructor(originAirport, randomAirport, flightURL, startingCity, airports, flightTable, newCityButton, initMap) { //initMap
+  constructor(originAirport, randomAirport, flightURL, startingCity, airports, flightTable, newCityButton, flightDetailsButton, initMap) { //initMap
     this.originAirport = null;
     this.randomAirport = null;
     this.flightURL = null;
@@ -7,12 +7,14 @@ class App {
     this.airports = airports;
     this.flightTable = flightTable;
     this.newCityButton = newCityButton;
+    this.flightDetailsButton = flightDetailsButton;
+    this.initMap = initMap;
     this.handleFlightInfoSuccess = this.handleFlightInfoSuccess.bind(this);
     this.handleFlightInfoError = this.handleFlightInfoError.bind(this);
     this.getStartingCity = this.getStartingCity.bind(this);
     this.getRandomCity = this.getRandomCity.bind(this);
     this.getFlightInfo = this.getFlightInfo.bind(this);
-    this.initMap = initMap;
+
   }
 
   start() {
@@ -21,7 +23,10 @@ class App {
     this.newCityButton.addEventListener("click", () => {
       document.querySelector("main").classList.add("hidden");
       document.querySelector("header").classList.add("hidden");
+      document.querySelector("footer").classList.add("hidden");
      this.getFlightInfo()})
+
+     this.flightDetailsButton.addEventListener("click", ()=> console.log("clicked!"))
   }
 
   getFlightInfo() {
@@ -80,6 +85,7 @@ class App {
   handleFlightInfoSuccess(flightInfo) {
     document.querySelector("main").classList.remove("hidden");
     document.querySelector("header").classList.remove("hidden");
+    document.querySelector("footer").classList.remove("hidden");
     this.flightTable.onStartCityChosen(flightInfo)
   }
 

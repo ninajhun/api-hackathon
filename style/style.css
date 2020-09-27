@@ -42,17 +42,29 @@ a:visited {
 
 button {
   background-color: rgb(62, 106, 199);
+  margin-top: 5px;
   font-family: Arvo, Helvetica, sans-serif;
   border: none;
   color: white;
   padding: 10px 32px;
-  font-size: 10px;
+  font-size: .75rem;
   outline: none;
 }
 
 button:hover {
   background-color: rgb(145, 186, 240);
   color: black;
+}
+
+/* HEADER */
+
+header{
+  background-color: rgb(62, 106, 199);
+
+}
+
+header h1 {
+  color: white
 }
 
 /* START PAGE */
@@ -147,7 +159,7 @@ select:hover {
 /* MAIN */
 main {
   width: 100%;
-  margin: auto;
+  margin-top: 15px;
   max-width: 1250px;
   display: flex;
   align-items: center;
