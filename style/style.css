@@ -34,14 +34,10 @@ a:hover {
   text-decoration: underline;
 }
 
-a:visited {
-  color: rgb(194, 194, 194);
-  background-color: transparent;
-  text-decoration: none;
-}
 
 button {
   background-color: rgb(62, 106, 199);
+  width: 250px;
   margin-top: 5px;
   font-family: Arvo, Helvetica, sans-serif;
   border: none;
