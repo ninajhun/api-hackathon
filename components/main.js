@@ -14,6 +14,7 @@ var newCityButton = document.getElementById("random-button")
 var originAirport;
 var randomAirport;
 var flightURL;
+const outboundDate = (new Date()).toISOString().split('T')[0];
 var startingCity = document.getElementById("starting-city")
 
 function initMap(latitude_deg, longitude_deg) {
@@ -24,6 +25,7 @@ function initMap(latitude_deg, longitude_deg) {
 }
 
 var app = new App(
+  outboundDate,
   originAirport,
   randomAirport,
   flightURL,

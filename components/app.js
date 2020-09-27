@@ -1,5 +1,6 @@
 class App {
-  constructor(originAirport, randomAirport, flightURL, startingCity, airports, flightTable, newCityButton, flightDetailsButton, initMap) { //initMap
+  constructor(outboundDate, originAirport, randomAirport, flightURL, startingCity, airports, flightTable, newCityButton, flightDetailsButton, initMap) { //initMap
+    this.outboundDate = outboundDate;
     this.originAirport = null;
     this.randomAirport = null;
     this.flightURL = null;
@@ -14,6 +15,7 @@ class App {
     this.getStartingCity = this.getStartingCity.bind(this);
     this.getRandomCity = this.getRandomCity.bind(this);
     this.getFlightInfo = this.getFlightInfo.bind(this);
+    this.openSkyscanner = this.openSkyscanner.bind(this)
 
   }
 
@@ -24,14 +26,21 @@ class App {
       document.querySelector("main").classList.add("hidden");
       document.querySelector("header").classList.add("hidden");
       document.querySelector("footer").classList.add("hidden");
-     this.getFlightInfo()})
+      this.getFlightInfo()
+    })
 
-     this.flightDetailsButton.addEventListener("click", ()=> console.log("clicked!"))
+     this.flightDetailsButton.addEventListener("click", this.openSkyscanner) //move to get flight info?
   }
 
-  getFlightInfo() {
-    const outboundDate = (new Date()).toISOString().split('T')[0];
+  openSkyscanner() {
 
+    const skyscannerLink = `https://www.skyscanner.com/transport/flights/${this.originAirport}/${this.randomAirport}/${this.outboundDate}/?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&destinationentityid=27537542&inboundaltsenabled=false&infants=0&originentityid=27547037&outboundaltsenabled=false&preferdirects=false&preferflexible=false&ref=home&rtn=0`
+    window.open(skyscannerLink);
+  }
+
+
+
+  getFlightInfo() {
     this.getStartingCity();
     this.getRandomCity(this.airports);
     this.flightURL = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/${this.originAirport}-sky/${this.randomAirport}-sky/${outboundDate}?inboundpartialdate=2020-12-01`
@@ -86,7 +95,7 @@ class App {
     document.querySelector("main").classList.remove("hidden");
     document.querySelector("header").classList.remove("hidden");
     document.querySelector("footer").classList.remove("hidden");
-    this.flightTable.onStartCityChosen(flightInfo)
+    this.flightTable.onStartCityChosen(flightInfo);
   }
 
   handleFlightInfoError(error) {
