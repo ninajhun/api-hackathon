@@ -1,12 +1,8 @@
 
 var video = document.querySelector("video");
-var videoSource = document.getElementById("travel-vid")
-
-
 var videos = [
  "./img/arc-de-triomphe.mp4" , "./img/hot-air-balloons.mp4", "./img/ocean.mp4", "./img/sf.mp4"
 ]
-
 
 window.addEventListener("load", getRandomVideo)
 
@@ -14,7 +10,6 @@ function getRandomVideo(){
   shuffle(videos);
   video.setAttribute("src", videos[0]);
 }
-
 
 function shuffle(array) {
   for (var i = 0; i < array.length; i++) {

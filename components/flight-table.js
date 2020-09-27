@@ -16,16 +16,11 @@ class FlightTable {
       flightTableBody.classList.remove("hidden")
       noFlightsMessage.classList.add("hidden")
 
-      this.flightInfo = flightInfo;  //why is this necessary?
+      this.flightInfo = flightInfo;
 
       tbody.textContent = " ";
       tbody.append(this.renderFlightRow());
     }
-
-    // // for (var i = 0; i < flightInfo.length; i++){
-    //   tbody.append(this.renderFlightRow()); //[i];
-    // // }
-    // //renderFlightRow(flightInfo)
   }
 
   renderFlightRow(){
@@ -35,14 +30,15 @@ class FlightTable {
     var arrive = document.createElement("td");
     var price = document.createElement("td");
 
-    airline.textContent = flightTable.flightInfo.Carriers[0].Name
-    depart.textContent = flightTable.flightInfo.Places[1].IataCode
-    arrive.textContent = flightTable.flightInfo.Places[0].IataCode
-    price.textContent = "$" + flightTable.flightInfo.Quotes[0].MinPrice
+    airline.textContent = this.flightInfo.Carriers[0].Name
+    depart.textContent = this.flightInfo.Places[1].IataCode
+    arrive.textContent = this.flightInfo.Places[0].IataCode
+    price.textContent = "$" + this.flightInfo.Quotes[0].MinPrice
 
     row.append(airline, depart, arrive, price);
 
     return row;
+
   }
 
 }
