@@ -162,7 +162,7 @@ main {
   align-items: center;
 }
 
-.container {
+/* .container {
   width: 100%;
   max-width: 1250px;
   margin: auto;
@@ -175,7 +175,7 @@ main {
   flex-wrap: wrap;
   padding: 5px;
   justify-content: center;
-}
+} */
 
 .flight-info {
   height: 400px;
@@ -220,8 +220,6 @@ footer {
   position: relative;
   top: 10px;
 }
-
-
 
 /*HIDDEN */
 
