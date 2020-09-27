@@ -2,7 +2,6 @@
 //flight-details-button
 var flightDetailsButton = document.getElementById("flight-details-button")
 
-
 //flight-info//
 var table = document.querySelector("table");
 var flightTable = new FlightTable(table);

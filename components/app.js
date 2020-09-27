@@ -38,8 +38,6 @@ class App {
     window.open(skyscannerLink);
   }
 
-
-
   getFlightInfo() {
     this.getStartingCity();
     this.getRandomCity(this.airports);
@@ -110,7 +108,6 @@ class App {
       array[randomPosition] = placeHolder;
     }
   }
-
 
 
 }
