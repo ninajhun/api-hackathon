@@ -39,7 +39,7 @@ a:hover {
 button {
   background-color: rgb(62, 106, 199);
   width: 250px;
-  margin-top: 5px;
+  margin-top: 10px;
   font-family: Arvo, Helvetica, sans-serif;
   border: none;
   color: white;
@@ -114,7 +114,6 @@ select:hover {
 
 /*LOADING PAGE */
 
-
 .loading-modal{
   position: fixed;
   height: 100%;
@@ -123,12 +122,12 @@ select:hover {
   bottom: 0;
   display: flex;
   align-items: center;
-  justify-content: top;
-  flex-direction: column;
   font-size: 1.5rem ;
   background-color: white;
 }
+
 .loading {
+  /* position: relative; */
   width: 50px;
   height:40px;
   margin: 40px auto;
@@ -140,6 +139,7 @@ select:hover {
   stroke-dashoffset: 425.59;
   animation: plane-loading-animation 3s linear infinite;
 }
+
 
 @keyframes plane-loading-animation {
   50% {
@@ -161,6 +161,14 @@ main {
   display: flex;
   align-items: center;
 }
+
+.container {
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+  padding: 10px;
+}
+
 .row {
   width: 100%;
   display: flex;
@@ -205,6 +213,13 @@ th {
   margin: 10px;
 }
 
+
+/*FOOTER */
+
+footer {
+  position: relative;
+  top: 10px;
+}
 
 
 

@@ -1,5 +1,5 @@
 class App {
-  constructor(outboundDate, originAirport, randomAirport, flightURL, startingCity, airports, flightTable, newCityButton, flightDetailsButton, initMap) { //initMap
+  constructor(outboundDate, originAirport, randomAirport, flightURL, startingCity, airports, flightTable, newCityButton, flightDetailsButton, initMap) {
     this.outboundDate = outboundDate;
     this.originAirport = null;
     this.randomAirport = null;
@@ -48,8 +48,8 @@ class App {
       "crossDomain": true,
       "url": this.flightURL,
       "method": "GET",
-      "beforeSend": () => document.querySelector(".loading").classList.remove("hidden"),
-      "complete": () => document.querySelector(".loading").classList.add("hidden"),
+      "beforeSend": () => document.querySelector(".loading-modal").classList.remove("hidden"),
+      "complete": () => document.querySelector(".loading-modal").classList.add("hidden"),
       "headers": {
         "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
         "x-rapidapi-key": skyKey
@@ -70,7 +70,7 @@ class App {
     } else if (this.startingCity.value === "new-york") {
       this.originAirport = "JFK"
     }
-    return this.originAirport;
+
   }
 
   getRandomCity(array) {
@@ -85,7 +85,6 @@ class App {
     document.getElementById("map").classList.remove("hidden");
     this.initMap(array[0].latitude_deg, array[0].longitude_deg)
 
-    return this.randomAirport;
   }
 
 
