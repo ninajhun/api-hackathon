@@ -47,6 +47,7 @@
     header h1 {
     color: white;
     font-size: 3rem;
+    text-align: center;
    }
 
    h3 {
@@ -109,6 +110,32 @@
     .vid-container {
       height: 64%;
     }
+
+     button {
+      font-size: 1.2rem;
+      width: 567px;
+      padding: 15px;
+   }
+
+   footer > h4 {
+     margin: 0;
+   }
+
+   .row {
+     margin: auto;
+     padding: 0%;
+
+   }
+
+   footer {
+     top: 0;
+   }
+
+   #no-flights-message h4 {
+     font-size: 1.4rem;
+     margin: 0px;
+   }
+
 }
 
 
