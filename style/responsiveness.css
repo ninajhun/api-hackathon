@@ -30,14 +30,33 @@
     max-width: 100%;
     }
 
+    header {
+      display: flex;
+      align-items: center;
+      height: 11vh;
+    }
+
     h1.start-text {
       font-size: 5rem;
-      text-shadow: 2px 2px 4px #000000;
     }
 
     h2 {
       font-size: 3.75rem;
     }
+
+    header h1 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+   }
+
+   h3 {
+     font-size: 3.2rem;
+   }
+
+   h4 {
+    font-size: 29px;
+   }
 
     .vid-container {
         height: 73%;
@@ -46,6 +65,29 @@
     select {
         font-size: 3rem;
     }
+
+    #map {
+      width: 100%;
+      height: 45vh;
+    }
+
+    .flight-info{
+      top: 70px;
+    }
+
+    footer {
+      top: 85px;
+    }
+
+    th, td {
+      font-size: 2.5rem;
+    }
+
+    button {
+      font-size: 2.3rem;
+      width: 567px;
+      padding: 23px;
+   }
 
 }
 
@@ -63,6 +105,32 @@
     .vid-container {
       height: 64%;
     }
+
+    button {
+    font-size: 1.2rem;
+    width: 567px;
+    padding: 15px;
+  }
+
+   footer > h4 {
+     margin: 0;
+   }
+
+    .row {
+      margin: auto;
+      padding: 0%;
+
+    }
+
+    footer {
+      top: 0;
+    }
+
+    #no-flights-message h4 {
+      font-size: 1.4rem;
+      margin: 0px;
+    }
+
 }
 
 
@@ -87,7 +155,22 @@
   and (orientation: portrait)
   and (-webkit-min-device-pixel-ratio: 1) {
 
-     .vid-container {
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12 {
+    max-width: 100%;
+    }
+
+    .vid-container {
         height: 75%;
     }
 
@@ -98,6 +181,47 @@
     h2 {
       font-size: 3rem;
     }
+
+    h3 {
+      font-size: 2.5rem;
+    }
+
+    h4 {
+     font-size: 1.5rem;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      height: 11vh;
+    }
+
+    header h1 {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+   }
+
+   #map {
+     width: 100%;
+     height: 50vh;
+   }
+
+   th, td {
+     font-size: 2rem;
+   }
+
+   button {
+    font-size: 1.5rem;
+    width: 400px;
+    padding: 15px;
+  }
+
+
+
+
+
+
 
 }
 
