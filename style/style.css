@@ -29,6 +29,7 @@ a:link {
 a:hover {
   background-color: transparent;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 
@@ -47,6 +48,7 @@ button {
 button:hover {
   background-color: rgb(145, 186, 240);
   color: black;
+  cursor: pointer;
 }
 
 /* HEADER */
@@ -106,7 +108,8 @@ select {
 }
 
 select:hover {
-  border-color: rgb(62, 106, 199)
+  border-color: rgb(62, 106, 199);
+  cursor: pointer;
 }
 
 /*LOADING PAGE */
