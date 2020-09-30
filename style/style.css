@@ -19,7 +19,7 @@ h3 {
 h4 {
   font-size: 1rem;
   font-family: Arvo, Helvetica, sans-serif;
-  text-align: center;
+  /* text-align: center; */
 }
 
 a:link {
@@ -32,8 +32,7 @@ a:hover {
   cursor: pointer;
 }
 
-
-button {
+ button {
   background-color: rgb(62, 106, 199);
   width: 220px;
   margin: 10px;
@@ -55,8 +54,8 @@ button:hover {
 
 header{
   background-color: rgb(62, 106, 199);
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 }
 
 header h1 {
@@ -153,15 +152,15 @@ select:hover {
 }
 
 /* MAIN */
-main {
+/* main {
   width: 100%;
   margin-top: 15px;
   max-width: 1250px;
   display: flex;
   align-items: center;
-}
+} */
 
-.flight-info {
+/* .flight-info {
   height: 400px;
   width: 40%;
   margin-left: 30px;
@@ -169,7 +168,7 @@ main {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-}
+} */
 
 .button-row{
   display: flex;
@@ -199,18 +198,18 @@ th {
   background-color: rgb(145, 186, 240);
   color: rgb(32, 32, 32);
 }
-
+/*
 .info{
   margin: 10px;
-}
+} */
 
 
 /*FOOTER */
 
-footer {
+/* footer {
   position: relative;
   top: 10px;
-}
+} */
 
 /*HIDDEN */
 

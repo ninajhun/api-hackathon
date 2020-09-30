@@ -3,18 +3,19 @@
 
 <head>
   <title>Holiday Roulette</title>
-  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="style/reset.css"> -->
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/map-style.css">
-  <link rel="stylesheet" href="style/grid.css">
-  <link rel="stylesheet" href="style/responsiveness.css">
+  <!-- <link rel="stylesheet" href="style/grid.css">
+  <link rel="stylesheet" href="style/responsiveness.css"> -->
   <link rel="icon" href="/img/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
+  <!-- STARTING PAGE -->
   <div class="start-modal">
     <div class="vid-container">
       <video loop muted class="vid" width="1275" autoplay></video>
@@ -32,7 +33,7 @@
     </form>
   </div>
 
-
+  <!-- LOADING PAGE -->
   <div class="loading-modal hidden">
     <div class="loading loading--plane" title="Loading">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113.5 104">
@@ -45,19 +46,22 @@
   </div>
 
 
-  <header class="hidden">
-    <h1 class="random-city-text"></h1>
-  </header>
 
-  <main class="container hidden">
+  <!-- MAIN PAGE -->
+  <div class="container-fluid">
 
-    <div class="row">
+    <header class="row p-2 mb-4 justify-content-center hidden">
+      <h1 class="random-city-text"></h1>
+    </header>
 
-      <div id="map" class="hidden col-7"></div>
 
-      <div class="flight-info col-5">
+    <main class="hidden">
 
-        <div class="row">
+      <div class="row">
+        <div id="map" class="hidden col-lg-5 offset-lg-1"></div>
+
+        <div class="flight-info col-lg-5 offset-lg-1">
+
           <h3 class="info">Your Flight:</h3>
           <table id="flights-table">
             <thead>
@@ -74,31 +78,35 @@
             <h4>There are no flights currently. </br> Check Skyscanner for more options or try again.</h4>
           </div>
 
+          <div class="button-row">
+            <button id="flight-details-button">Book now on Skyscanner!</button>
+            <button id="random-button">Give me a new location!</button>
+          </div>
+
         </div>
 
-        <div class="row button-row">
-          <button id="flight-details-button">Book now on Skyscanner!</button>
-          <button id="random-button">Give me a new location!</button>
-        </div>
+
 
 
 
 
       </div>
-    </div>
+      <!-- </div> -->
 
-  </main>
+    </main>
 
-  <footer class="hidden">
-    <div class="row">
-      <h4>
-        This app uses cached results from the Skyscanner database. Please visit <a href="https://skyscanner.com"
-          target="_blank">Skyscanner's website </a>for more up to date
-        flight quotes.
-      </h4>
-    </div>
+    <footer class="hidden">
+      <div class="row">
+        <h4>
+          This app uses cached results from the Skyscanner database. Please visit <a href="https://skyscanner.com"
+            target="_blank">Skyscanner's website </a>for more up to date
+          flight quotes.
+        </h4>
+      </div>
 
-  </footer>
+    </footer>
+
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
   <script src="config.js"></script>
