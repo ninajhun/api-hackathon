@@ -1,4 +1,4 @@
-# api-hackathon
+# holiday-roulette
 A front-end JavaScript application that utilizes the Google Maps API and the Skyscanner API (through RapidAPI's hosting) to allow a user to generate a random city to travel to.
 * Displays a map, the flight details, and a link to Skyscanner to book plane tickets. 
 
