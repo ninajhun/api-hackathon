@@ -45,22 +45,20 @@
     </div>
   </div>
 
-
-
   <!-- MAIN PAGE -->
   <div class="container-fluid">
 
-    <header class="row p-2 mb-4 justify-content-center hidden">
+    <header class="row p-3 mb-5 justify-content-center hidden">
       <h1 class="random-city-text"></h1>
     </header>
 
 
     <main class="hidden">
+      <div class="row mb-5">
 
-      <div class="row">
-        <div id="map" class="hidden col-lg-5 offset-lg-1"></div>
+        <div id="map" class="hidden col-lg-5  col-sm-12 offset-lg-1"></div>
 
-        <div class="flight-info col-lg-5 offset-lg-1">
+        <div class="flight-info col-lg-5  col-sm-12 d-flex flex-column justify-content-center align-items-center ">
 
           <h3 class="info">Your Flight:</h3>
           <table id="flights-table">
@@ -85,25 +83,17 @@
 
         </div>
 
-
-
-
-
-
       </div>
-      <!-- </div> -->
-
     </main>
 
     <footer class="hidden">
-      <div class="row">
+      <div class="row justify-content-center">
         <h4>
           This app uses cached results from the Skyscanner database. Please visit <a href="https://skyscanner.com"
             target="_blank">Skyscanner's website </a>for more up to date
           flight quotes.
         </h4>
       </div>
-
     </footer>
 
   </div>
