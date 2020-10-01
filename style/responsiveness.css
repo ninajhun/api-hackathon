@@ -15,29 +15,16 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
-    .col-1,
-    .col-2,
-    .col-3,
-    .col-4,
-    .col-5,
-    .col-6,
-    .col-7,
-    .col-8,
-    .col-9,
-    .col-10,
-    .col-11,
-    .col-12 {
-    max-width: 100%;
-    }
-
     header {
-      display: flex;
-      align-items: center;
       height: 11vh;
     }
 
     h1.start-text {
       font-size: 5rem;
+    }
+
+    select#starting-city{
+      font-size: 2rem;
     }
 
     h2 {
@@ -47,19 +34,24 @@
     header h1 {
     color: white;
     font-size: 3rem;
-    text-align: center;
    }
 
-   h3 {
-     font-size: 3.2rem;
-   }
+    h3.info {
+      font-size: 3.2rem;
+    }
 
-   h4 {
-    font-size: 29px;
-   }
+      footer h4 {
+    font-size: 2rem;
+    }
+
 
     .vid-container {
         height: 73%;
+    }
+
+    #select-starting-city {
+      height: 20vh;
+
     }
 
     select {
@@ -84,8 +76,8 @@
     }
 
     button {
-      font-size: 2.3rem;
-      width: 567px;
+      font-size: 2rem;
+      width: 455px;
       padding: 23px;
    }
 
@@ -216,11 +208,6 @@
     width: 400px;
     padding: 15px;
   }
-
-
-
-
-
 
 
 }

@@ -7,30 +7,35 @@
   <!-- <link rel="stylesheet" href="style/reset.css"> -->
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/map-style.css">
-  <!-- <link rel="stylesheet" href="style/grid.css">
-  <link rel="stylesheet" href="style/responsiveness.css"> -->
+  <!-- <link rel="stylesheet" href="style/grid.css">  -->
+  <link rel="stylesheet" href="style/responsiveness.css">
   <link rel="icon" href="/img/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
   <!-- STARTING PAGE -->
-  <div class="start-modal">
-    <div class="vid-container">
+  <div class="start-modal container-fluid">
+
+    <div class="vid-container row">
       <video loop muted class="vid" width="1275" autoplay></video>
       <h1 class="start-text">Are you ready for your <br>next Adventure?</h1>
     </div>
 
-    <h2> let chance pick your next vacation... </h2>
-    <form>
-      <select name="starting-city" id="starting-city">
-        <option value="" disabled selected>Select your starting city...</option>
-        <option value="los-angeles">Los Angeles</option>
-        <option value="orange-county">Orange County</option>
-        <option value="new-york">New York</option>
-      </select>
-    </form>
+    <div id="select-starting-city" class="row flex-column align-items-center justify-content-center">
+      <h2 class="m-4 "> let chance pick your next vacation... </h2>
+      <form >
+        <select name="starting-city" id="starting-city">
+          <option value="" disabled selected>Select your starting city...</option>
+          <option value="los-angeles">Los Angeles</option>
+          <option value="orange-county">Orange County</option>
+          <option value="new-york">New York</option>
+        </select>
+      </form>
+    </div>
+
   </div>
 
   <!-- LOADING PAGE -->
@@ -48,7 +53,7 @@
   <!-- MAIN PAGE -->
   <div class="container-fluid">
 
-    <header class="row p-3 mb-5 justify-content-center hidden">
+    <header class="row p-3 mb-5 justify-content-center align-items-center hidden">
       <h1 class="random-city-text"></h1>
     </header>
 
@@ -77,8 +82,8 @@
           </div>
 
           <div class="button-row">
-            <button id="flight-details-button">Book now on Skyscanner!</button>
-            <button id="random-button">Give me a new location!</button>
+            <button id="flight-details-button btn">Book now on Skyscanner!</button>
+            <button id="random-button btn">Give me a new location!</button>
           </div>
 
         </div>

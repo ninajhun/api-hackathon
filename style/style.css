@@ -9,18 +9,22 @@ h1 {
 
 }
 
-h2 {
+/* h2 {
   font-size: 2rem;
 }
 
 h3 {
   font-size: 1.5rem;
-}
+} */
 
 h4 {
-  font-size: 1rem;
+  /* font-size: 1rem; */
   font-family: Arvo, Helvetica, sans-serif;
   /* text-align: center; */
+}
+
+footer h4 {
+  font-size: 1rem;
 }
 
 a:link {
@@ -79,7 +83,7 @@ header h1 {
 }
 
 .vid-container {
-  height: 65%;
+  height: 73%;
   width: 100%;
   display: flex;
   align-items: center;
