@@ -41,7 +41,7 @@ class App {
   getFlightInfo() {
     this.getStartingCity();
     this.getRandomCity(this.airports);
-    this.flightURL = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/${this.originAirport}-sky/${this.randomAirport}-sky/${outboundDate}?inboundpartialdate=2020-12-01`
+    this.flightURL = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/${this.originAirport}-sky/${this.randomAirport}-sky/${this.outboundDate}?inboundpartialdate=2030-12-01`
 
     $.ajax({
       "async": true,
