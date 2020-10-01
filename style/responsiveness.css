@@ -67,10 +67,6 @@
       top: 70px;
     }
 
-    footer {
-      top: 85px;
-    }
-
     th, td {
       font-size: 2.5rem;
     }
@@ -104,18 +100,14 @@
     padding: 15px;
   }
 
-   footer > h4 {
+   /* footer > h4 {
      margin: 0;
-   }
+   } */
 
     .row {
       margin: auto;
       padding: 0%;
 
-    }
-
-    footer {
-      top: 0;
     }
 
     #no-flights-message h4 {
