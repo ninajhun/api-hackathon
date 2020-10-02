@@ -1684,23 +1684,6 @@ const airports = [
     "wikipedia_link": "https://en.wikipedia.org/wiki/Sir_Seretse_Khama_International_Airport"
   },
   {
-    "ident": "FDSK",
-    "type": "large_airport",
-    "name": "King Mswati III International Airport",
-    "latitude_deg": -26.358611,
-    "longitude_deg": 31.716944,
-    "elevation_ft": 1092,
-    "continent": "AF",
-    "iso_country": "SZ",
-    "iso_region": "SZ-LU",
-    "municipality": "",
-    "gps_code": "FDSK",
-    "iata_code": "SHO",
-    "local_code": "",
-    "home_link": "http://www.eswacaa.co.sz/airports/kingmswatiIII/",
-    "wikipedia_link": "https://en.wikipedia.org/wiki/King_Mswati_III_International_Airport"
-  },
-  {
     "ident": "FIMP",
     "type": "large_airport",
     "name": "Sir Seewoosagur Ramgoolam International Airport",
@@ -6359,23 +6342,6 @@ const airports = [
     "wikipedia_link": "https://en.wikipedia.org/wiki/King_Fahd_International_Airport"
   },
   {
-    "ident": "OEDR",
-    "type": "large_airport",
-    "name": "King Abdulaziz Air Base",
-    "latitude_deg": 26.2653999329,
-    "longitude_deg": 50.1520004272,
-    "elevation_ft": 84,
-    "continent": "AS",
-    "iso_country": "SA",
-    "iso_region": "SA-04",
-    "municipality": "",
-    "gps_code": "OEDR",
-    "iata_code": "DHA",
-    "local_code": "",
-    "home_link": "",
-    "wikipedia_link": "https://en.wikipedia.org/wiki/Dhahran_International_Airport"
-  },
-  {
     "ident": "OEJN",
     "type": "large_airport",
     "name": "King Abdulaziz International Airport",
@@ -7226,23 +7192,6 @@ const airports = [
     "wikipedia_link": "https://en.wikipedia.org/wiki/Incheon_International_Airport"
   },
   {
-    "ident": "RKSO",
-    "type": "large_airport",
-    "name": "Osan Air Base",
-    "latitude_deg": 37.090599,
-    "longitude_deg": 127.029999,
-    "elevation_ft": 38,
-    "continent": "AS",
-    "iso_country": "KR",
-    "iso_region": "KR-41",
-    "municipality": "",
-    "gps_code": "RKSO",
-    "iata_code": "OSN",
-    "local_code": "",
-    "home_link": "",
-    "wikipedia_link": "https://en.wikipedia.org/wiki/Osan_Air_Base"
-  },
-  {
     "ident": "RKSS",
     "type": "large_airport",
     "name": "Gimpo International Airport",
@@ -7292,23 +7241,6 @@ const airports = [
     "local_code": "",
     "home_link": "http://www.naha-airport.co.jp/",
     "wikipedia_link": "https://en.wikipedia.org/wiki/Naha_Airport"
-  },
-  {
-    "ident": "RODN",
-    "type": "large_airport",
-    "name": "Kadena Air Base",
-    "latitude_deg": 26.3556,
-    "longitude_deg": 127.767998,
-    "elevation_ft": 143,
-    "continent": "AS",
-    "iso_country": "JP",
-    "iso_region": "JP-47",
-    "municipality": "",
-    "gps_code": "RODN",
-    "iata_code": "DNA",
-    "local_code": "",
-    "home_link": "",
-    "wikipedia_link": "https://en.wikipedia.org/wiki/Kadena_Air_Base"
   },
   {
     "ident": "RPLC",
@@ -7411,23 +7343,6 @@ const airports = [
     "local_code": "",
     "home_link": "",
     "wikipedia_link": "https://en.wikipedia.org/wiki/Grozny_Airport"
-  },
-  {
-    "ident": "SA-0009",
-    "type": "large_airport",
-    "name": "Financial Services business and personal loans no collateral require",
-    "latitude_deg": 90,
-    "longitude_deg": 90,
-    "elevation_ft": "",
-    "continent": "AS",
-    "iso_country": "SA",
-    "iso_region": "SA-04",
-    "municipality": "",
-    "gps_code": "",
-    "iata_code": "",
-    "local_code": "",
-    "home_link": "",
-    "wikipedia_link": ""
   },
   {
     "ident": "SAEZ",
@@ -8433,23 +8348,6 @@ const airports = [
     "wikipedia_link": "https://en.wikipedia.org/wiki/Bandaranaike_International_Airport"
   },
   {
-    "ident": "VCRI",
-    "type": "large_airport",
-    "name": "Mattala Rajapaksa International Airport",
-    "latitude_deg": 6.284467,
-    "longitude_deg": 81.124128,
-    "elevation_ft": 157,
-    "continent": "AS",
-    "iso_country": "LK",
-    "iso_region": "LK-3",
-    "municipality": "",
-    "gps_code": "VCRI",
-    "iata_code": "HRI",
-    "local_code": "VCRI",
-    "home_link": "http://www.mria.lk/",
-    "wikipedia_link": "https://en.wikipedia.org/wiki/Mattala_Rajapaksa_International_Airport"
-  },
-  {
     "ident": "VDPP",
     "type": "large_airport",
     "name": "Phnom Penh International Airport",
@@ -8992,23 +8890,6 @@ const airports = [
     "local_code": "",
     "home_link": "http://www.jakartasoekarnohattaairport.com/",
     "wikipedia_link": "https://en.wikipedia.org/wiki/Soekarno-Hatta_International_Airport"
-  },
-  {
-    "ident": "WIMM",
-    "type": "large_airport",
-    "name": "Kualanamu International Airport",
-    "latitude_deg": 3.642222,
-    "longitude_deg": 98.885278,
-    "elevation_ft": 23,
-    "continent": "AS",
-    "iso_country": "ID",
-    "iso_region": "ID-SU",
-    "municipality": "",
-    "gps_code": "WIMM",
-    "iata_code": "KNO",
-    "local_code": "",
-    "home_link": "http://www.kualanamu-airport.co.id/",
-    "wikipedia_link": "https://en.wikipedia.org/wiki/Kualanamu_International_Airport"
   },
   {
     "ident": "WMKK",
