@@ -97,6 +97,9 @@ class App {
 
   handleFlightInfoError(error) {
     console.error(error);
+    document.getElementById("error-message").classList.remove("hidden")
+    document.querySelector("header").classList.add("hidden");
+
   }
 
   shuffle(array) {
