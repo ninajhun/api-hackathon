@@ -30,6 +30,11 @@
       margin-bottom: 0px !important;
     }
 
+
+    .loading--plane {
+      width: 100px;
+    }
+
 }
 
 /* Portrait */

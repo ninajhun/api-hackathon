@@ -132,7 +132,7 @@ select:hover {
 }
 
 .loading--plane {
-  width: 70px;
+  width: 130px;
   stroke-dasharray: 425.59;
   stroke-dashoffset: 425.59;
   animation: plane-loading-animation 3s linear infinite;
