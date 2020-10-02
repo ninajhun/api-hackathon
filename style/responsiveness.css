@@ -15,48 +15,18 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
+    .vid-container {
+        height: 65vh;
+    }
+
     header {
-      height: 11vh;
-    }
-
-    h1.start-text {
-      font-size: 5rem;
-    }
-
-    select#starting-city{
-      font-size: 2rem;
-    }
-
-    h2 {
-      font-size: 3.75rem;
+      height: 12vh;
     }
 
     header h1 {
     color: white;
-    font-size: 3rem;
+    font-size: 1.5rem;
    }
-
-    h3.info {
-      font-size: 3.2rem;
-    }
-
-      footer h4 {
-    font-size: 2rem;
-    }
-
-
-    .vid-container {
-        height: 73%;
-    }
-
-    #select-starting-city {
-      height: 20vh;
-
-    }
-
-    select {
-        font-size: 3rem;
-    }
 
     #map {
       width: 100%;
@@ -67,15 +37,12 @@
       top: 70px;
     }
 
-    th, td {
-      font-size: 2.5rem;
-    }
-
     button {
-      font-size: 2rem;
-      width: 455px;
+      width: 80%;
       padding: 23px;
+      margin: 20px 0px 0px;
    }
+
 
 }
 
@@ -100,10 +67,9 @@
     padding: 15px;
   }
 
-
     #no-flights-message h4 {
       font-size: 1.4rem;
-      margin: 0px;
+      /* margin: 0px; */
     }
 
 }
