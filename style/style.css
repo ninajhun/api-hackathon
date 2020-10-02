@@ -13,11 +13,11 @@ h1 {
 
 h4 {
   font-family: Arvo, Helvetica, sans-serif;
+  font-size: 1.25rem;
 }
 
-footer h4 {
-  font-size: 1rem;
-}
+
+/* LINKS & BUTTONS */
 
 a {
    color: rgb(62, 106, 199);
@@ -75,7 +75,7 @@ header h1 {
   justify-content: top;
   flex-direction: column;
   font-size: 1.5rem ;
-  background-color: white;
+  /* background-color: whitesmoke; */
 }
 
 .vid-container {
@@ -90,6 +90,12 @@ header h1 {
   object-fit: cover;
   height: 100%;
 }
+
+/* #select-starting-city.row {
+  background-color: white;
+  width: 1275px;
+  height: 27%;
+} */
 
 h1.start-text{
   position: absolute;
@@ -182,7 +188,10 @@ footer {
     margin-top: 10px;
     bottom: 0;
     width: 100%;
+}
 
+footer h4 {
+  font-size: 1rem;
 }
 
 /*HIDDEN */
