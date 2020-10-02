@@ -1,3 +1,19 @@
+/* ----------- Large Screens----------- */
+@media screen and (min-width: 1300px) {
+
+  .start-modal {
+      background-color: rgb(185, 216, 255);
+  }
+
+  #select-starting-city.row {
+  background-color: white;
+  width: 1275px;
+  height: 27%;
+  }
+
+}
+
+
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait and Landscape */
@@ -5,6 +21,19 @@
   and (min-device-width: 375px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
+
+    #map {
+      width: 100%;
+    }
+
+    h1.random-city-text {
+      margin-bottom: 0px !important;
+    }
+
+
+    .loading--plane {
+      width: 100px;
+    }
 
 }
 
@@ -15,79 +44,25 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
-    .col-1,
-    .col-2,
-    .col-3,
-    .col-4,
-    .col-5,
-    .col-6,
-    .col-7,
-    .col-8,
-    .col-9,
-    .col-10,
-    .col-11,
-    .col-12 {
-    max-width: 100%;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      height: 11vh;
-    }
-
-    h1.start-text {
-      font-size: 5rem;
-    }
-
-    h2 {
-      font-size: 3.75rem;
+     .vid-container {
+        height: 65vh;
     }
 
     header h1 {
     color: white;
-    font-size: 3rem;
-    text-align: center;
+    font-size: 1.8rem;
    }
-
-   h3 {
-     font-size: 3.2rem;
-   }
-
-   h4 {
-    font-size: 29px;
-   }
-
-    .vid-container {
-        height: 73%;
-    }
-
-    select {
-        font-size: 3rem;
-    }
-
-    #map {
-      width: 100%;
-      height: 45vh;
-    }
 
     .flight-info{
-      top: 70px;
-    }
-
-    footer {
-      top: 85px;
-    }
-
-    th, td {
-      font-size: 2.5rem;
+      top: 20px;
     }
 
     button {
-      font-size: 2.3rem;
-      width: 567px;
+      width: 80%;
       padding: 23px;
+      margin: 20px 0px 0px;
    }
+
 
 }
 
@@ -98,37 +73,28 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
 
-    select {
-     font-size: 1.25rem;
-    }
-
     .vid-container {
-      height: 64%;
+        height: 60vh;
     }
 
-    button {
-    font-size: 1.2rem;
-    width: 567px;
-    padding: 15px;
-  }
+    select {
+     font-size: 1.1rem;
+    }
 
-   footer > h4 {
-     margin: 0;
+    #select-starting-city h2:first-child {
+      font-size: 2rem
+    }
+
+   h1.random-city-text {
+    font-size: 1.8rem;
    }
-
-    .row {
-      margin: auto;
-      padding: 0%;
-
-    }
-
-    footer {
-      top: 0;
-    }
 
     #no-flights-message h4 {
       font-size: 1.4rem;
-      margin: 0px;
+    }
+
+     .flight-info{
+      top: 15px;
     }
 
 }
@@ -155,19 +121,8 @@
   and (orientation: portrait)
   and (-webkit-min-device-pixel-ratio: 1) {
 
-    .col-1,
-    .col-2,
-    .col-3,
-    .col-4,
-    .col-5,
-    .col-6,
-    .col-7,
-    .col-8,
-    .col-9,
-    .col-10,
-    .col-11,
-    .col-12 {
-    max-width: 100%;
+     h1.random-city-text {
+      margin-bottom: 0px !important;
     }
 
     .vid-container {
@@ -178,50 +133,33 @@
       font-size: 2rem;
     }
 
-    h2 {
+     h2 {
       font-size: 3rem;
     }
 
     h3 {
-      font-size: 2.5rem;
+      font-size: 2.25rem;
     }
 
-    h4 {
-     font-size: 1.5rem;
+
+    #map {
+      width: 100%;
+      height: 47vh;
     }
 
-    header {
-      display: flex;
-      align-items: center;
-      height: 11vh;
+    .flight-info{
+      top: 15px;
     }
 
-    header h1 {
-    color: white;
-    font-size: 2.5rem;
-    text-align: center;
-   }
+    th, td {
+      font-size: 1.75rem;
+    }
 
-   #map {
-     width: 100%;
-     height: 50vh;
-   }
-
-   th, td {
-     font-size: 2rem;
-   }
-
-   button {
-    font-size: 1.5rem;
-    width: 400px;
-    padding: 15px;
-  }
-
-
-
-
-
-
+    button {
+      font-size: 1.5rem;
+      width: 355px;
+      padding: 15px;
+    }
 
 }
 
@@ -239,5 +177,19 @@
     h2 {
       font-size: 2.5rem;
     }
+
+    h1.random-city-text {
+      margin-bottom: 15px !important;
+    }
+
+    #map {
+    width: 100% !important;
+    height: 75vh;
+    margin-left: 0px !important;
+  }
+
+   .flight-info {
+     width: 100% !important;
+   }
 
 }
