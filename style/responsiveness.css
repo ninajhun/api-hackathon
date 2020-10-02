@@ -3,7 +3,7 @@
 @media screen and (min-width: 1300px) {
 
   .start-modal {
-      background-color: whitesmoke;
+      background-color: rgb(185, 216, 255);
   }
 
   #select-starting-city.row {
@@ -23,6 +23,15 @@
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
+    #map {
+      width: 100%;
+    }
+
+    h1.random-city-text {
+      margin-bottom: 0px !important;
+    }
+
+
 }
 
 /* Portrait */
@@ -32,23 +41,15 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
-    .vid-container {
+     .vid-container {
         height: 65vh;
     }
 
-    header {
-      height: 15vh;
-      margin-bottom: 10px;
-    }
 
     header h1 {
     color: white;
     font-size: 1.8rem;
    }
-
-    #map {
-      width: 100%;
-    }
 
     .flight-info{
       top: 20px;
@@ -70,19 +71,19 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
 
+     .vid-container {
+        height: 60vh;
+    }
+
+
     select {
-     font-size: 1.25rem;
+     font-size: 1.1rem;
     }
 
-    .vid-container {
-      height: 64%;
-    }
 
-    button {
-    font-size: 1.2rem;
-    width: 567px;
-    padding: 15px;
-  }
+    #select-starting-city h2:first-child {
+      font-size: 2rem
+    }
 
 
    h1.random-city-text {
@@ -91,7 +92,10 @@
 
     #no-flights-message h4 {
       font-size: 1.4rem;
-      /* margin: 0px; */
+    }
+
+     .flight-info{
+      top: 15px;
     }
 
 }

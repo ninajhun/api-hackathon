@@ -75,7 +75,6 @@ header h1 {
   justify-content: top;
   flex-direction: column;
   font-size: 1.5rem ;
-  /* background-color: whitesmoke; */
 }
 
 .vid-container {
@@ -91,11 +90,6 @@ header h1 {
   height: 100%;
 }
 
-/* #select-starting-city.row {
-  background-color: white;
-  width: 1275px;
-  height: 27%;
-} */
 
 h1.start-text{
   position: absolute;
