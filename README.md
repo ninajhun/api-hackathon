@@ -15,6 +15,7 @@ https://holiday-roulette.ninajhun.com/
 
 ## Technologies Used
 * JavaScript
+* Bootstrap 4
 * Google Maps API
 * Skyscanner API
 * jQuery AJAX 
