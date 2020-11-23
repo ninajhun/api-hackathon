@@ -65,7 +65,7 @@ header h1 {
 
 /* START PAGE */
 .start-modal{
-  position: fixed;
+  /* position: fixed;
   height: 100%;
   width: 100%;
   top: 0;
@@ -74,7 +74,9 @@ header h1 {
   align-items: center;
   justify-content: top;
   flex-direction: column;
-  font-size: 1.5rem ;
+  font-size: 1.5rem ; */
+
+  height: 100vh;
 }
 
 .vid-container {
