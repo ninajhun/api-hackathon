@@ -29,7 +29,7 @@ class App {
       this.getFlightInfo()
     })
 
-     this.flightDetailsButton.addEventListener("click", this.openSkyscanner) //move to get flight info?
+     this.flightDetailsButton.addEventListener("click", this.openSkyscanner)
   }
 
   openSkyscanner() {
