@@ -39,13 +39,13 @@
 
 /* Portrait */
 @media only screen
-  and (min-device-width: 375px)
+  and (min-device-width: 320px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
-     .vid-container {
-        height: 65vh;
+    .vid-container {
+        height: 60%;
     }
 
     header h1 {
@@ -79,10 +79,11 @@
 
     select {
      font-size: 1.1rem;
+     padding: 0.2rem;
     }
 
     #select-starting-city h2:first-child {
-      font-size: 2rem
+      font-size: 1.7rem
     }
 
    h1.random-city-text {
