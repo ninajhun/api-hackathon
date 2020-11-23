@@ -1,15 +1,15 @@
 /* ----------- Large Screens----------- */
 @media screen and (min-width: 1300px) {
 
-  .start-modal {
+  /* .start-modal {
       background-color: rgb(185, 216, 255);
-  }
+  } */
 
-  #select-starting-city.row {
+  /* #select-starting-city.row {
   background-color: white;
   width: 1275px;
   height: 27%;
-  }
+  } */
 
 }
 
